@@ -1,0 +1,167 @@
+.top-bar{
+    /*background: linear-gradient(lightblue, aliceblue);*/
+    border-left: 1px solid lightgray;
+    border-right: 1px solid lightgray;
+    box-shadow: 10px 10px 5px lightgray;
+    padding-top: 5px;
+
+    /*background: linear-gradient(#90b3bf, aliceblue);*/
+    background:
+            radial-gradient(black 15%, transparent 16%) 0 0,
+            radial-gradient(black 15%, transparent 16%) 8px 8px,
+            radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+            radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+    background-color:#282828;
+    background-size:16px 16px;
+    border-radius: 5px;
+
+}
+
+#bass-pic{
+    max-width: 7%;
+    max-height: 7%;
+    padding-top: 5px;
+    float: left;
+    display: inline-block;
+    padding-bottom: 3px;
+}
+
+#header{
+    /*color: #250505;*/
+    /*color: #332219;
+    text-shadow: 1px 1px 4px #956448;*/
+
+    color: ghostwhite;
+    text-shadow: 1px 1px 4px #ffc9bd;
+    /*font-family: 'Bree Serif', serif;*/
+    display: inline;
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.9em;
+}
+
+.links{
+    /*font-family: 'Bree Serif', serif;*/
+    font-family: 'Dancing Script', cursive;
+    /*color: #250505;*/
+/*    color: #332219;
+    text-shadow: 1px 1px 4px #956448;*/
+
+    color: ghostwhite;
+    text-shadow: 1px 1px 3px #ffc9bd;
+
+}
+
+.links:hover{
+    text-decoration: none;
+    color: lightblue;
+    text-shadow: none;
+
+}
+
+.nav-bar{
+    border-top: 1px solid white;
+
+}
+
+body{
+    background-color: #fafafa;
+}
+
+.middle{
+    background-color: ghostwhite;
+    border-left: 1px solid lightgray;
+    border-right: 1px solid lightgray;
+    box-shadow: 10px 10px 5px lightgray;
+}
+
+#lake-pic{
+    max-height: 375px;
+    width: 85%;
+    padding: 10px;
+}
+
+.about{
+    padding: 15px;
+    color: #332219;
+    font-size: 14px;
+}
+
+#plug{
+    font-style: italic;
+    font-family: Arial, Calibri, serif;
+    font-weight: 600;
+    color: black;
+    text-shadow: 1px 1px 3px rgba(255, 201, 189, 0.64);
+    padding: 10px;
+}
+
+.page-description{
+    font-family: Arial, Calibri, serif;
+    font-weight: 600;
+    color: black;
+    text-shadow: 1px 1px 3px rgba(255, 201, 189, 0.64);
+}
+.table-headings{
+    text-align: center;
+}
+
+#gallery-container{
+    margin-top: 10px;
+}
+
+
+.forecast{
+    border: 1px solid gray;
+    background: linear-gradient(white, #bde9f8);
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+
+}
+
+.today, .day-1, .day-2, .day-3{
+    border-right: none;
+}
+
+.weather{
+    margin-top: 15px;
+    font-family: Arial, Calibri, serif;
+
+}
+
+.five-day-forecast{
+    padding-bottom: 10px;
+}
+
+
+#check-pic, #boat2-pic, #boat1-pic, #GON-pic, #R\&R-pic{
+    height: 300px;
+    width: 100%;
+}
+.payment-menu{
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+#paypal-button{
+    margin-bottom: 10px;
+}
+
+#contact-form{
+    padding-bottom: 10px;
+}
+
+#form-error{
+    color: red;
+}
+
+#boat-pic{
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+#gift-certificate{
+
+    /*height: 30vh;*/
+    width: 60%;
+    padding-bottom: 15px;
+}
