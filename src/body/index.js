@@ -4,12 +4,10 @@ import Equipment from './Equipment';
 import GiftCertificates from './GiftCertificates';
 import Home from './Home'
 import Packages from './Packages';
-import Title from './Title';
 
 const Body = () => {
     return (
         <div className="container middle">
-            <Title />
             <Routes>
                 <Route path="/Home" element={<Home />} />
                 <Route path="/Packages" element={<Packages />} />

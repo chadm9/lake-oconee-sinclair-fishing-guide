@@ -1,8 +1,13 @@
+import { Fragment } from "react";
 import BodyText from './BodyText';
+import Title from './Title';
 
 const Contact = () => {
     return (
-        <BodyText text={text} />
+        <Fragment>
+            <Title text={'Contact'} />
+            <BodyText text={text} />
+        </Fragment>
     )
 };
 

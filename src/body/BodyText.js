@@ -1,4 +1,3 @@
-
 const BodyText = ({ text }) => {
     return (
         <div className="row">
