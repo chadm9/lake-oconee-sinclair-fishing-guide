@@ -1,10 +1,10 @@
 import Links from './links';
-import Title from './title';
+import Heading from './heading';
 
 const Header = ({ pages }) => {
     return (
         <div Class="container top-bar">
-            <Title />
+            <Heading />
             <Links />
         </div>
     );

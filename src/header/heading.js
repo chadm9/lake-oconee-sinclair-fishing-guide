@@ -1,6 +1,6 @@
 import img from './../images/bass-1.png';
 
-const Title = () => {
+const Heading = () => {
     return (
         <div className="row">
             <div className="col-sm-12 text-center">
@@ -11,4 +11,4 @@ const Title = () => {
     )
 }
 
-export default Title;
+export default Heading;
