@@ -1,4 +1,4 @@
-import img from './../images/bass-1.png';
+import img from '../../images/bass-1.png';
 
 const Heading = () => {
     return (

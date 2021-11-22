@@ -1,5 +1,5 @@
 import {Fragment} from "react";
-import img from './../images/bass-2.jpg';
+import img from '../../images/bass-2.jpg';
 
 const Title = ({ text }) => {
     return (

@@ -1,7 +1,7 @@
 import { Fragment } from 'react';
-import Header from './header';
-import Body from './body';
-import Footer from './footer';
+import Header from './components/header';
+import Body from './components/body';
+import Footer from './components/footer';
 import './App.css';
 
 const App = () => {
