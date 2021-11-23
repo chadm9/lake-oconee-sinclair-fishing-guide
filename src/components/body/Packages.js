@@ -20,6 +20,10 @@ const bodyText = 'All packages include fuel costs, soft drinks and bottled water
 const plugText = 'Trip payments can be made via check, or using the PayPal checkout option below.'
 
 const PackagesTable = () => {
+    const trips = [
+        {length: '1/2 day (4 hours)', anglers:'1-2', price: '$300.00'},
+        {length: '3/4 day (6 hours)', anglers:'1-2', price: '$375.00'}
+    ]
     return (
         <div className="row">
             <div className="col-sm-10 col-sm-offset-1">
@@ -32,16 +36,15 @@ const PackagesTable = () => {
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <td>1/2 day (4 hours)</td>
-                        <td>1-2</td>
-                        <td>$300.00</td>
-                    </tr>
-                    <tr>
-                        <td>3/4 day (6 hours)</td>
-                        <td>1-2</td>
-                        <td>$375.00</td>
-                    </tr>
+                    {trips.map(trip => {
+                        return (
+                            <tr>
+                                <td>{trip.length}</td>
+                                <td>{trip.anglers}</td>
+                                <td>{trip.price}</td>
+                            </tr>
+                        )
+                    })}
                     </tbody>
                 </table>
             </div>
