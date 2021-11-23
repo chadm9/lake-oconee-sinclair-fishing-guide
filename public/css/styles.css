@@ -109,6 +109,9 @@ body{
     margin-top: 10px;
 }
 
+.carousel{
+    margin-left: -2%;
+}
 
 .forecast{
     border: 1px solid gray;
