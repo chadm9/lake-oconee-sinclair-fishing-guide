@@ -34,7 +34,6 @@ const ContactForm = () => {
     return  (
         <div className="col-sm-8 col-sm-offset-2">
             <form id="contact-form">
-                {/*<p id="form-error"></p>*/}
                 {/*<p id="form-submission"></p>*/}
                 <div className="form-group" id="name-input">
                     <label>Name</label>

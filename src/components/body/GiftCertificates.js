@@ -10,7 +10,7 @@ const GiftCertificates = () => {
             <Title text={'Gift Certificates'} />
             <BodyText text={bodyText} />
             <Plug text={plugText} />
-            <PayPal />
+            <PayPal isCertificate={true}/>
         </Fragment>
     )
 };

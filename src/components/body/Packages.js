@@ -11,7 +11,7 @@ const Packages = () => {
             <BodyText text={bodyText} />
             <PackagesTable />
             <Plug text={plugText}/>
-            <PayPal />
+            <PayPal isCertificate={false}/>
         </Fragment>
     )
 };
