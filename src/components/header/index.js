@@ -1,9 +1,9 @@
-import Links from './links';
-import Heading from './heading';
+import Links from './Links';
+import Heading from './Heading';
 
 const Header = ({ pages }) => {
     return (
-        <div Class="container top-bar">
+        <div className="container top-bar">
             <Heading />
             <Links />
         </div>

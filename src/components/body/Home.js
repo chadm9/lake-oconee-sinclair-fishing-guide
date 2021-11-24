@@ -1,7 +1,8 @@
-import { Fragment } from "react";
+import React, { Fragment } from "react";
 import BodyText from '../common/BodyText';
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import ReactWeather, { useOpenWeather } from 'react-open-weather';
 import Plug from '../common/Plug';
 import Title from '../common/Title';
 import carouselImg1 from '../../images/Roger_wins_boat2.jpg';
@@ -17,6 +18,7 @@ const Home = () => {
             <Plug text={plugText} />
             <BodyText text={bodyText} />
             <SlideShow />
+            <Forecast />
         </Fragment>
     )
 };
@@ -38,7 +40,7 @@ const SlideShow = () => {
                 <Carousel className="text-center" autoPlay={true} infiniteLoop={true} interval={4000} showArrows={false} showStatus={false}>
                     {images.map((img, index) => {
                         return (
-                            <div className="col-sm-4 col-sm-offset-4">
+                            <div key={index} className="col-sm-4 col-sm-offset-4">
                                 <img src={img} />
                                 <p className="legend">{captions[index]}</p>
                             </div>
@@ -47,6 +49,34 @@ const SlideShow = () => {
                 </Carousel>
         </div>
     )
+}
+
+const Forecast = () => {
+    const { data, isLoading, errorMessage } = useOpenWeather({
+        key: 'f5873508e48856fe11f3748ef4662371',
+        lat: '33.449339',
+        lon: '-83.26209',
+        lang: 'en',
+        unit: 'imperial', // values are (metric, standard, imperial)
+    });
+    return (
+        <div className="row">
+            <div className="col-sm-12 text-center">
+                <h3 className="page-description">5 Day Lake Oconee/Sinclair Fishing Forecast</h3>
+            </div>
+            <div className="col-xs-8 col-xs-offset-2 weather">
+                <ReactWeather
+                    isLoading={isLoading}
+                    errorMessage={errorMessage}
+                    data={data}
+                    lang="en"
+                    locationLabel="Lake Oconee"
+                    unitsLabels={{ temperature: 'F', windSpeed: 'mph' }}
+                    showForecast
+                />
+            </div>
+        </div>
+    );
 }
 
 export default Home;
