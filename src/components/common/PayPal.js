@@ -23,10 +23,10 @@ const PayPal = ({ isCertificate }) => {
                             <td>
                                 <select name="os0">
                                     <option value="1/2 Day Bass Fishing Trip">
-                                        1/2 Day Bass Fishing Trip {designateCertificate(isCertificate)}$300.00 USD
+                                        1/2 Day Bass Fishing {designateCertificate(isCertificate)}$300.00
                                     </option>
                                     <option value="3/4 Day Bass Fishing Trip">
-                                        3/4 Day Bass Fishing Trip {designateCertificate(isCertificate)}$375.00 USD
+                                        3/4 Day Bass Fishing {designateCertificate(isCertificate)}$375.00
                                     </option>
                                 </select>
                             </td>
@@ -48,7 +48,7 @@ const PayPal = ({ isCertificate }) => {
 };
 
 const designateCertificate = (isCertificate) => {
-    return isCertificate ? 'Certificate ' : '';
+    return isCertificate ? 'Certificate ' : 'Trip ';
 }
 
 export default PayPal;

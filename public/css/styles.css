@@ -36,7 +36,7 @@
     /*font-family: 'Bree Serif', serif;*/
     display: inline;
     font-family: 'Dancing Script', cursive;
-    font-size: 2.9em;
+    font-size: 2.75em;
 }
 
 .links{
@@ -45,11 +45,12 @@
     /*color: #250505;*/
 /*    color: #332219;
     text-shadow: 1px 1px 4px #956448;*/
-
+    font-size: 1.2em;
     color: ghostwhite;
     text-shadow: 1px 1px 3px #ffc9bd;
 
 }
+
 
 .links:hover{
     text-decoration: none;
@@ -91,7 +92,7 @@ body{
     font-family: Arial, Calibri, serif;
     font-weight: 600;
     color: black;
-    text-shadow: 1px 1px 3px rgba(255, 201, 189, 0.64);
+    /*text-shadow: 1px 1px 3px rgba(255, 201, 189, 0.64);*/
     padding: 10px;
 }
 
@@ -114,22 +115,16 @@ body{
 }
 
 .forecast{
-    border: 1px solid gray;
-    background: linear-gradient(white, #bde9f8);
+    width: 85vw;
+    margin-left:6vw;
     margin-bottom: 10px;
     padding-bottom: 10px;
-
-}
-
-.today, .day-1, .day-2, .day-3{
-    border-right: none;
 }
 
 .weather{
     margin-top: 15px;
     font-family: Arial, Calibri, serif;
     margin-bottom: 15px;
-
 }
 
 .five-day-forecast{

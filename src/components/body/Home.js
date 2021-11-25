@@ -23,7 +23,7 @@ const Home = () => {
     )
 };
 
-const bodyText = 'Roger has fished lakes Oconee and Sinclair for more than 25 years and has been a guide on these lakes for over 15 years. He is active on numerous tournament trails and has over 60 first place wins and countless top five finishes. He has served as an instructor at fishing university classes while performing hundreds of "on the water" instructions for beginner and intermediate anglers. Roger does guided fishing trips from the Ritz Carlton Lodge, Reynolds Plantation, Cuscowilla, Great Waters, Harbor Club, Oconee Outdoors, and Sugar Creek Marina. Corporate guided trips are available for up to 24 anglers, and gift certificates can be purchased online for any occasion.';
+const bodyText = 'Roger has fished lakes Oconee and Sinclair for more than 25 years and has been a guide on these lakes for over 15 years. He is active on numerous tournament trails and has over 60 first place wins and countless top five finishes. He has served as an instructor at fishing university classes while performing hundreds of "on the water" instructions for beginner and intermediate anglers. Roger does guided fishing trips from the Ritz Carlton Lodge, Reynolds Plantation, Cuscowilla, Great Waters, Harbor Club, Oconee Outdoors, and Sugar Creek Marina. Corporate guided trips are available, and gift certificates can be purchased online for any occasion.';
 const plugText = 'Enjoy a fun-filled day of fishing on Lake Oconee or Sinclair with Roger McKee, a professional fishing guide and tournament angler.'
 const caption1 = 'Roger wins another boat in the HD Marine Tournament Trail.'
 const caption2 = 'Champions of Berry\'s 2-day Classic Tournament on Lakes Sinclair and Oconee.'
@@ -60,22 +60,26 @@ const Forecast = () => {
         unit: 'imperial', // values are (metric, standard, imperial)
     });
     return (
-        <div className="row">
-            <div className="col-sm-12 text-center">
-                <h3 className="page-description">5 Day Lake Oconee/Sinclair Fishing Forecast</h3>
+        <Fragment>
+            <div className="row">
+                <div className="col-sm-12 text-center">
+                    <h3 className="page-description">5 Day Lake Oconee/Sinclair Fishing Forecast</h3>
+                </div>
             </div>
-            <div className="col-xs-8 col-xs-offset-2 weather">
-                <ReactWeather
-                    isLoading={isLoading}
-                    errorMessage={errorMessage}
-                    data={data}
-                    lang="en"
-                    locationLabel="Lake Oconee"
-                    unitsLabels={{ temperature: 'F', windSpeed: 'mph' }}
-                    showForecast
-                />
+            <div className="row">
+                <div className="forecast">
+                    <ReactWeather
+                        isLoading={isLoading}
+                        errorMessage={errorMessage}
+                        data={data}
+                        lang="en"
+                        locationLabel="Lake Oconee/Sinclair Area"
+                        unitsLabels={{ temperature: 'F', windSpeed: 'mph' }}
+                        showForecast
+                    />
+                </div>
             </div>
-        </div>
+        </Fragment>
     );
 }
 

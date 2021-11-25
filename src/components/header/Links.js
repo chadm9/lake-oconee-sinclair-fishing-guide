@@ -6,7 +6,9 @@ const Links = () => {
         <div className="row text-center nav-bar">
             <div className="col-sm-1"> </div>
                 {pages.map((page, index) => (
-                    <Link className="col-sm-2 links" key={index} to={page.replace(' ', '')}>{page}</Link>
+                    <div key={index} className="col-sm-2 links">
+                        <Link class="links" to={page.replace(' ', '')}>{page}</Link>
+                    </div>
                 ))}
             <div className="col-sm-1"> </div>
         </div>
