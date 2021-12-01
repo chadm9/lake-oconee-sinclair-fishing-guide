@@ -114,11 +114,29 @@ body{
     margin-left: -2%;
 }
 
-.forecast{
-    width: 85vw;
-    margin-left:6vw;
-    margin-bottom: 10px;
-    padding-bottom: 10px;
+/*.forecast{*/
+/*    width: 85vw;*/
+/*    margin-left:6vw;*/
+/*    margin-bottom: 10px;*/
+/*    padding-bottom: 10px;*/
+/*}*/
+
+@media only screen and (max-width: 600px) {
+    .forecast {
+        width: 85vw;
+        margin-left:6vw;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    .forecast {
+        width: 60%;
+        padding-left: 7%;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+    }
 }
 
 .weather{

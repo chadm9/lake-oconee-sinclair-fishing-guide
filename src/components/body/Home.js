@@ -67,7 +67,7 @@ const Forecast = () => {
                 </div>
             </div>
             <div className="row">
-                <div className="forecast">
+                <div className="forecast 8 col-sm-offset-2">
                     <ReactWeather
                         isLoading={isLoading}
                         errorMessage={errorMessage}
