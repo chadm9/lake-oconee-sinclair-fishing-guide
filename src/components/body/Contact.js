@@ -1,6 +1,8 @@
 import React, { Fragment, useState } from 'react';
 import BodyText from '../common/BodyText';
 import Title from '../common/Title';
+import { SEND_MAIL_CLOUD_FUNCTION_URL } from "../../config/config";
+import axios from 'axios';
 
 const Contact = () => {
     return (
@@ -12,12 +14,12 @@ const Contact = () => {
     )
 };
 
-const text = 'To schedule a trip, or for more information, contact Roger via email, telephone, or by filling out the form below.';
+const text = 'To schedule a trip, or for more information, contact Roger via email, telephone, or by filling out the form below (all fields are required).';
 
 const ContactForm = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
-    const [msg, setMsg] = useState('');
+    const [message, setMessage] = useState('');
     const [submitDisabled, setSubmitDisabled] = useState(false);
     const [invalidName, setInvalidName] = useState(false);
     const [invalidEmail, setInvalidEmail] = useState(false);
@@ -27,10 +29,18 @@ const ContactForm = () => {
     const handleSubmit = () => {
         if (name.length === 0) setInvalidName(true);
         if (!emailRegex.test(email)) setInvalidEmail(true);
-        if (msg.length === 0) setInvalidMsg(true);
+        if (message.length === 0) setInvalidMsg(true);
+        if (invalidName || invalidEmail || invalidMsg ) return setSubmitDisabled(true);
 
-        return setSubmitDisabled(true);
+        const contents = JSON.stringify({
+            name,
+            email,
+            message
+        });
+
+        axios.post(SEND_MAIL_CLOUD_FUNCTION_URL, contents, { headers:{'Content-Type': 'text/plain'} })
     }
+
     return  (
         <div className="col-sm-8 col-sm-offset-2">
             <form id="contact-form">
@@ -47,7 +57,7 @@ const ContactForm = () => {
                 </div>
                 <div className="form-group">
                     <label>Message</label>
-                    <textarea id="message" placeholder="message" className="form-control" rows="4" value={msg} onChange={(e) => setMsg(e.target.value)} />
+                    <textarea id="message" placeholder="message" className="form-control" rows="4" value={message} onChange={(e) => setMessage(e.target.value)} />
                     {invalidMsg ? <p id="form-error">A message is required</p> : null}
                 </div>
                 <button id='contact-button' className="btn btn-primary" disabled={submitDisabled} onClick={handleSubmit}>Submit</button>

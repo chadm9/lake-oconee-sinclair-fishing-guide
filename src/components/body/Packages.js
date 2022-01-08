@@ -21,19 +21,19 @@ const plugText = 'Trip payments can be made via check, or using the PayPal check
 
 const PackagesTable = () => {
     const trips = [
-        {length: '1/2 day (4 hours)', anglers:'1-2', price: '$300.00'},
-        {length: '3/4 day (6 hours)', anglers:'1-2', price: '$375.00'}
+        {length: '1/2 day (4 hours)', anglers:'1-2', price: '$375.00'},
+        {length: '3/4 day (6 hours)', anglers:'1-2', price: '$450.00'}
     ]
     return (
         <div className="row">
             <div className="col-sm-10 col-sm-offset-1">
                 <table className="table table-striped text-center">
                     <thead>
-                    <tr>
-                        <th className="table-headings">Length</th>
-                        <th className="table-headings"># of Anglers</th>
-                        <th className="table-headings">Price</th>
-                    </tr>
+                        <tr>
+                            <th className="table-headings">Length</th>
+                            <th className="table-headings"># of Anglers</th>
+                            <th className="table-headings">Price</th>
+                        </tr>
                     </thead>
                     <tbody>
                     {trips.map(trip => {
