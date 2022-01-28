@@ -1,0 +1,13 @@
+steps:
+  # Build the container image
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'gcr.io/lakeoconeesinclairguideservice/lakeoconeesinclairguideservices', '.']
+  # Push the image to GCP Container Registry
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'gcr.io/lakeoconeesinclairguideservice/lakeoconeesinclairguideservices']
+  # Deploy the image to GCP Cloud Run
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: gcloud
+    args: ['run', 'deploy', 'lakeoconeesinclairguideservices', '--image', 'gcr.io/lakeoconeesinclairguideservice/lakeoconeesinclairguideservices', '--region', 'us-east1', '--platform', 'managed', '--allow-unauthenticated']
+images:
+  - gcr.io/lakeoconeesinclairguideservice/lakeoconeesinclairguideservices
